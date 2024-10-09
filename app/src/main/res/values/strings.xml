@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Chorey</string>
+    <string name="pending_chores">Pending Chores</string>
+    <string name="completed_chores">Completed Chores</string>
+</resources>
