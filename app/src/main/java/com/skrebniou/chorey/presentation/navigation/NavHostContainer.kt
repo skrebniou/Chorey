@@ -4,8 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.skrebniou.chorey.presentation.screens.CompletedChoresScreen
-import com.skrebniou.chorey.presentation.screens.PendingChoresScreen
+import com.skrebniou.chorey.presentation.composables.CompletedChoresScreen
+import com.skrebniou.chorey.presentation.composables.PendingChoresScreen
 
 @Composable
 fun NavHostContainer(
