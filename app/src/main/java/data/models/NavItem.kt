@@ -1,4 +1,4 @@
-package com.skrebniou.chorey.presentation.entities
+package data.models
 
 import androidx.compose.ui.graphics.vector.ImageVector
 

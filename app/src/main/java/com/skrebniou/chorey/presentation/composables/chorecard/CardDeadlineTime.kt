@@ -14,11 +14,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.skrebniou.chorey.presentation.viewmodels.MainViewModel
 
 @Composable
-fun CardDeadlineTime(deadlineTime: String) {
+fun CardDeadlineTime(
+    choreId: Int,
+    deadlineTime: String,
+    viewModel: MainViewModel = hiltViewModel()
+) {
     Row(
-        Modifier.clickable { }
+        Modifier.clickable { viewModel.onCardDeadlineTimeClick(choreId) }
     ) {
         Icon(
             imageVector = Icons.Default.DateRange,

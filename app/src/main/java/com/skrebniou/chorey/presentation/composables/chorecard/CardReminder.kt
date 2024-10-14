@@ -14,11 +14,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.skrebniou.chorey.presentation.viewmodels.MainViewModel
 
 @Composable
-fun CardReminder(reminderTime: String) {
+fun CardReminder(choreId: Int, reminderTime: String, viewModel: MainViewModel = hiltViewModel()) {
     Row(
-        Modifier.clickable { }
+        Modifier.clickable { viewModel.onCardReminderClick(choreId) }
     ) {
         Icon(
             imageVector = Icons.Default.Notifications,

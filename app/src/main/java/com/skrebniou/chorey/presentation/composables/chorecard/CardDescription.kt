@@ -14,11 +14,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.skrebniou.chorey.presentation.viewmodels.MainViewModel
 
 @Composable
-fun CardDescription(description: String) {
+fun CardDescription(choreId: Int, description: String, viewModel: MainViewModel = hiltViewModel()) {
     Row(
-        Modifier.clickable { }
+        Modifier.clickable { viewModel.onCardDescriptionClick(choreId) }
     ) {
         Icon(
             imageVector = Icons.Default.Info,

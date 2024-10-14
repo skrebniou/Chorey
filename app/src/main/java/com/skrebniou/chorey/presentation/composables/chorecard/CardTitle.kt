@@ -11,11 +11,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.skrebniou.chorey.presentation.viewmodels.MainViewModel
 
 @Composable
-fun CardTitle(label: String) {
+fun CardTitle(choreId: Int, label: String, viewModel: MainViewModel = hiltViewModel()) {
     Row(
-        Modifier.clickable { }
+        Modifier.clickable { viewModel.onCardTitleClick(choreId) }
     ) {
         Text(
             text = label,

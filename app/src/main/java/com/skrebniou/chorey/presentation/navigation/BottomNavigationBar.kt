@@ -15,7 +15,7 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.skrebniou.chorey.R
-import com.skrebniou.chorey.presentation.entities.NavItem
+import data.models.NavItem
 
 @Composable
 fun BottomNavigationBar(navController: NavHostController, context: Context) {
