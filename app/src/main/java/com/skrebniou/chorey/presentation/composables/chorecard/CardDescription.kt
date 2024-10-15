@@ -25,14 +25,14 @@ fun CardDescription(choreId: Int, description: String, viewModel: MainViewModel 
         Icon(
             imageVector = Icons.Default.Info,
             contentDescription = "Description",
-            tint = MaterialTheme.colorScheme.tertiary,
+            tint = MaterialTheme.colorScheme.onSecondary,
             modifier = Modifier.size(20.dp)
         )
         Spacer(modifier = Modifier.width(8.dp))
         Text(
             text = description,
             fontSize = 16.sp,
-            color = MaterialTheme.colorScheme.secondary
+            color = MaterialTheme.colorScheme.onSecondary
         )
     }
 }

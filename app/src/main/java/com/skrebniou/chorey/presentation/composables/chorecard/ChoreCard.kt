@@ -28,11 +28,10 @@ import java.time.format.DateTimeFormatter
 fun ChoreCard(chore: Chore, viewModel: MainViewModel = hiltViewModel()) {
     Card(
         modifier = Modifier
-            .fillMaxWidth()
-            .padding(8.dp),
+            .fillMaxWidth(),
         shape = RoundedCornerShape(8.dp),
         colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surface
+            containerColor = MaterialTheme.colorScheme.secondary
         )
     ) {
         Column(

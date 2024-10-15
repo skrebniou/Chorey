@@ -25,14 +25,14 @@ fun CardReminder(choreId: Int, reminderTime: String, viewModel: MainViewModel = 
         Icon(
             imageVector = Icons.Default.Notifications,
             contentDescription = "Reminder",
-            tint = MaterialTheme.colorScheme.tertiary,
+            tint = MaterialTheme.colorScheme.onSecondary,
             modifier = Modifier.size(20.dp)
         )
         Spacer(modifier = Modifier.width(8.dp))
         Text(
             text = reminderTime,
             fontSize = 16.sp,
-            color = MaterialTheme.colorScheme.secondary
+            color = MaterialTheme.colorScheme.onSecondary
         )
         Spacer(modifier = Modifier.width(8.dp))
     }

@@ -23,7 +23,7 @@ fun CardTitle(choreId: Int, label: String, viewModel: MainViewModel = hiltViewMo
             text = label,
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
-            color = MaterialTheme.colorScheme.primary
+            color = MaterialTheme.colorScheme.onSecondary
         )
         Spacer(modifier = Modifier.width(8.dp))
     }

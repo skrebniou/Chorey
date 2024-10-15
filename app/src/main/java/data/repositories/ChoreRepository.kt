@@ -59,6 +59,12 @@ class ChoreRepository @Inject constructor(
         }
     }
 
+    suspend fun setChoreCompletionStatus(id: Int, completionStatus: Boolean) {
+        return withContext(Dispatchers.IO) {
+            choreDao.upsertChore(getChore(id).toDbEntity().copy(isCompleted = completionStatus))
+        }
+    }
+
     suspend fun createChore() {
         return withContext(Dispatchers.IO) {
             choreDao.upsertChore(

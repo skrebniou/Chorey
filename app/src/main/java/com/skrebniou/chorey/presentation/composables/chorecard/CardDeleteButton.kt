@@ -25,6 +25,6 @@ fun CardDeleteButton(
             .size(50.dp)
             .clickable(onClick = { viewModel.onCardDeleteBtnClick(choreId) })
             .padding(8.dp),
-        tint = MaterialTheme.colorScheme.primary
+        tint = MaterialTheme.colorScheme.onSecondary
     )
 }

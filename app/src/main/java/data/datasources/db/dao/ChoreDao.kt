@@ -24,5 +24,5 @@ interface ChoreDao {
     fun getChore(id: Int): ChoreDbEntity
 
     @Query("DELETE FROM Chores WHERE Chores.Id == :id")
-    fun deleteChore(id: Int): ChoreDbEntity
+    fun deleteChore(id: Int): Unit
 }

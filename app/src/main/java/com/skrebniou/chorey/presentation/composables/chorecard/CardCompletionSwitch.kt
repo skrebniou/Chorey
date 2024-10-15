@@ -35,6 +35,6 @@ fun CardCompletionSwitch(
                 )
             })
             .padding(8.dp),
-        tint = MaterialTheme.colorScheme.primary
+        tint = MaterialTheme.colorScheme.onSecondary
     )
 }

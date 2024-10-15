@@ -29,14 +29,14 @@ fun CardDeadlineTime(
         Icon(
             imageVector = Icons.Default.DateRange,
             contentDescription = "Time and date",
-            tint = MaterialTheme.colorScheme.tertiary,
+            tint = MaterialTheme.colorScheme.onSecondary,
             modifier = Modifier.size(20.dp)
         )
         Spacer(modifier = Modifier.width(8.dp))
         Text(
             text = deadlineTime,
             fontSize = 16.sp,
-            color = MaterialTheme.colorScheme.secondary
+            color = MaterialTheme.colorScheme.onSecondary
         )
     }
 }
