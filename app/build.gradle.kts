@@ -78,4 +78,6 @@ dependencies {
     kapt(libs.hilt.compiler)
     kapt(libs.androidx.room.compiler)
     implementation(libs.hilt.navigation.compose)
+    implementation(libs.accompanist.navigation.animation)
+
 }

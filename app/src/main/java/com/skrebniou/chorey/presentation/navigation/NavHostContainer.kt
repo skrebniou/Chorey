@@ -1,5 +1,7 @@
 package com.skrebniou.chorey.presentation.navigation
 
+import androidx.compose.animation.AnimatedContentTransitionScope
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -7,6 +9,7 @@ import androidx.navigation.compose.composable
 import com.skrebniou.chorey.presentation.composables.CompletedChoresScreen
 import com.skrebniou.chorey.presentation.composables.PendingChoresScreen
 
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun NavHostContainer(
     navController: NavHostController
@@ -14,12 +17,18 @@ fun NavHostContainer(
     NavHost(
         navController = navController,
         startDestination = "pendingChores",
-        builder = {
-            composable("pendingChores") {
-                PendingChoresScreen()
-            }
-            composable("completedChores") {
-                CompletedChoresScreen()
-            }
-        })
+        enterTransition = {
+            slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Left)
+        },
+        exitTransition = {
+            slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Right)
+        }
+    ) {
+        composable("pendingChores") {
+            PendingChoresScreen()
+        }
+        composable("completedChores") {
+            CompletedChoresScreen()
+        }
+    }
 }
