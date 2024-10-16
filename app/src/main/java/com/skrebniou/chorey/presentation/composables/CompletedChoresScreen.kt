@@ -13,10 +13,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.skrebniou.chorey.R
 import com.skrebniou.chorey.presentation.composables.chorecard.ChoreCard
 import com.skrebniou.chorey.presentation.viewmodels.MainViewModel
 
@@ -29,7 +31,7 @@ fun CompletedChoresScreen(viewModel: MainViewModel = hiltViewModel()) {
             .padding(horizontal = 16.dp)
     ) {
         Text(
-            text = "Completed chores",
+            text = stringResource(id = R.string.completed_chores),
             fontSize = 26.sp,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.onSecondary
@@ -43,7 +45,7 @@ fun CompletedChoresScreen(viewModel: MainViewModel = hiltViewModel()) {
                 }
             }
         } else {
-            EmptyIndicator(label = "No completed chores. Feeling lazy?")
+            EmptyIndicator(label = stringResource(id = R.string.no_completed_chores))
         }
     }
 }

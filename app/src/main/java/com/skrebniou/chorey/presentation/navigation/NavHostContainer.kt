@@ -1,7 +1,6 @@
 package com.skrebniou.chorey.presentation.navigation
 
 import androidx.compose.animation.AnimatedContentTransitionScope
-import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -9,7 +8,6 @@ import androidx.navigation.compose.composable
 import com.skrebniou.chorey.presentation.composables.CompletedChoresScreen
 import com.skrebniou.chorey.presentation.composables.PendingChoresScreen
 
-@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun NavHostContainer(
     navController: NavHostController

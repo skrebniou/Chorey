@@ -1,6 +1,5 @@
 package com.skrebniou.chorey.presentation.navigation
 
-import android.content.Context
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Done
 import androidx.compose.material.icons.filled.List
@@ -12,7 +11,7 @@ import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.core.content.ContextCompat.getString
+import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -20,7 +19,7 @@ import com.skrebniou.chorey.R
 import data.models.NavItem
 
 @Composable
-fun BottomNavigationBar(navController: NavHostController, context: Context) {
+fun BottomNavigationBar(navController: NavHostController) {
     NavigationBar(
         containerColor = MaterialTheme.colorScheme.primary,
         contentColor = MaterialTheme.colorScheme.secondary
@@ -30,12 +29,12 @@ fun BottomNavigationBar(navController: NavHostController, context: Context) {
 
         val navItems = listOf(
             NavItem(
-                label = getString(context, R.string.pending_chores),
+                label = stringResource(id = R.string.pending_chores),
                 icon = Icons.Filled.List,
                 route = "pendingChores"
             ),
             NavItem(
-                label = getString(context, R.string.completed_chores),
+                label = stringResource(id = R.string.completed_chores),
                 icon = Icons.Filled.Done,
                 route = "completedChores"
             )

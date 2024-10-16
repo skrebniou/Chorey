@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chorey</string>
+    <string name="pending_chores">Предстоящие дела</string>
+    <string name="completed_chores">Завершенные дела</string>
+    <string name="remind">Напомнить за</string>
+    <string name="hours">часов</string>
+    <string name="hour">час</string>
+    <string name="minutes">минут</string>
+    <string name="minute">минуту</string>
+    <string name="no_pending_chores">Нет запланированных дел. Пора добавить!</string>
+    <string name="no_completed_chores">Нет завершенных дел. Не рабочий настрой?</string>
+</resources>

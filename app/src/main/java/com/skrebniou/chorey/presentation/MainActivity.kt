@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 Scaffold(
                     modifier = Modifier.fillMaxSize(),
-                    bottomBar = { BottomNavigationBar(navController, applicationContext) },
+                    bottomBar = { BottomNavigationBar(navController) },
                     content = { innerPadding ->
                         Box(modifier = Modifier.padding(innerPadding)) {
                             NavHostContainer(navController = navController)
